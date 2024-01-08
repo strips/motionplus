@@ -500,6 +500,7 @@ void cls_libcam:: cam_config_transform()
     int indx, retcd;
     ctx_params_item itm;
 
+/* workaround https://github.com/Motion-Project/motionplus/issues/115
     config->transform = Transform::Identity;
 
     for (indx = 0; indx < camctx->libcam->params->params_count; indx++) {
@@ -532,6 +533,7 @@ void cls_libcam:: cam_config_transform()
             }
         }
     }
+*/
 
     retcd = config->validate();
     if (retcd == CameraConfiguration::Adjusted) {
